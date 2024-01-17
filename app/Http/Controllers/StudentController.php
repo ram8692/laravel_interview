@@ -88,4 +88,20 @@ class StudentController extends Controller
 
 
         }
+
+    public function getChunks()
+    {
+        // $students = Student::chunk(2, function ($students) {
+        //     foreach ($students as $student) {
+        //         echo $student;
+        //     }
+        //     echo "<br><br>";
+        // });
+
+        //it will fetch one data at a time and pass it to the callback function
+        foreach (Student::where('id','<','10')->cursor() as $student) {
+                    echo $student;
+                 }
+
+    }
 }
