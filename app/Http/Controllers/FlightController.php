@@ -6,6 +6,24 @@ use Illuminate\Http\Request;
 
 class FlightController extends Controller
 {
+
+    public function index(){
+
+        $students  = Student::where('name','anmol')->get(); //to get filter data from the database
+
+       // $students  = Student::get(); //to get all students data from the database
+        return view("student.index",compact("students")); //passing the data to the view
+    }
+
+    public function getSpecificUser(){
+        //$students  = Student::find($id); //to get specific data from the database  according to id
+        //$students  = Student::first(); //to get first data from the database
+        //$students  = Student::where('name','amol')->first();  //to get first data from the database according to name
+
+
+
+        return view("student.index",compact("students"));
+    }
     
     public function store(Request $request){
 
