@@ -13,7 +13,7 @@ class Flight extends Model
 
     // Define the columns that are guarded and cannot be mass-assigned (usually the primary key)
     protected $guarded = ['id'];  //this code u can use when you are using create method for data save 
-    // protected $guarded = [];
+    //or  protected $guarded = [];
 
     // Define the columns that are fillable and can be mass-assigned
     protected $fillable = [   //data must have in optional case u can get array i will recomment you use above guard property 
