@@ -53,4 +53,29 @@ class FlightController extends Controller
 
 
     }
+
+    public function update(Request $request){
+
+        $id = $request->id;
+
+        //one way to update data
+        // $data = [
+        //     "name"=> $request->name,
+        //     "email"=> $request->email
+        // ];
+
+        // Student::where('id',$id)->update($data);
+
+        //other way to update data
+
+        $student = Student::find($id);
+        $student->name = $request->name;
+        $student->email = $request->email;
+        $student->save();
+
+
+
+
+
+        }
 }
