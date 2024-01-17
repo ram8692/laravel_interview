@@ -118,6 +118,21 @@ class StudentController extends Controller
         //$students = Student::findOrFail($id);  //if founded id then return the data else it will throw an exception it is working like find()
         //Student::where('id',$id)->firstOrFail(); //if founded id then return the data else it will throw an exception it is working like first()
 
+        //Student::firstOrCreate(['name'=>'anmol'],['gender'=>'male','age'=>27]); //if found id then update the data else create new data with name anmol and gender male and age 27
+
+        //Student::where('name','anmol')->count(); //agregate function to count the data sum max min avg count
+
+    //   $student = Student::find(3);
+
+     //  dd($student->result);
+
+     //$student = Student::get();
+
+    // dd($student[1]->result);
+
+        $student = Student::with('result')->get();
+
+        dd($student[1]->result);
 
     }
 }

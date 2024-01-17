@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
+
+public function result(){
+    return $this->hasOne(Result::class);
+}
+
     // // Specify the table name for this model (defaults to "flights" based on convention)
     // protected $table = 'my_flights';
 
