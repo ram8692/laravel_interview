@@ -68,13 +68,22 @@ class FlightController extends Controller
 
         //other way to update data
 
-        $student = Student::find($id);
-        $student->name = $request->name;
-        $student->email = $request->email;
-        $student->save();
+        // $student = Student::find($id);
+        // $student->name = $request->name;
+        // $student->email = $request->email;
+        // $student->save();
 
+        //other way to update or create data based on condition
 
+        $data = [
+            'id'=> $id, //added for upsert method
+                "name"=> $request->name,
+                "email"=> $request->email
+             ];
 
+             //Student::updateOrCreate(['id'=>$id,$data]); //it will check that id is exist  if not it will create new data if yes it will update the data
+
+//Student::upsert($data,['id'],['phone']); //if found id then update phone field else create new data with phone field
 
 
         }
