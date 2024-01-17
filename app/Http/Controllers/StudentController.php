@@ -113,7 +113,7 @@ class StudentController extends Controller
        dd($results);
     }
 
-    public function getfnf($id){
+    public function getfnf(){
 
         //$students = Student::findOrFail($id);  //if founded id then return the data else it will throw an exception it is working like find()
         //Student::where('id',$id)->firstOrFail(); //if founded id then return the data else it will throw an exception it is working like first()
@@ -130,9 +130,14 @@ class StudentController extends Controller
 
     // dd($student[1]->result);
 
-        $student = Student::with('result')->get();
+     //   $student = Student::with('result')->get();
 
-        dd($student[1]->result);
+     //   dd($student[1]->result);
+
+     //one to many relationship
+
+     $student = Student::find(3);
+     dd($student->results);
 
     }
 }

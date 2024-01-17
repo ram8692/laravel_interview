@@ -13,6 +13,9 @@ public function result(){
     return $this->hasOne(Result::class);
 }
 
+public function results(){
+    return $this->hasMany(Result::class);
+}
     // // Specify the table name for this model (defaults to "flights" based on convention)
     // protected $table = 'my_flights';
 
