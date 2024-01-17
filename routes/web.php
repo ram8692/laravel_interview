@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 
 Route::get('getchunck', [StudentController::class,'getChunks'])->name('chunkdata');
+Route::get('getresult', [StudentController::class,'getResult'])->name('getResult');
+

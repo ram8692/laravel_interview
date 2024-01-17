@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Student;
+use App\Models\Result;
+
 
 
 class StudentController extends Controller
@@ -103,5 +105,11 @@ class StudentController extends Controller
                     echo $student;
                  }
 
+    }
+
+    public function getResult(){
+       $results =  Result::addSelect(['name'=>Student::select('name')->whereColumn('results.student_id','students.id')])->get();
+
+       dd($results);
     }
 }
