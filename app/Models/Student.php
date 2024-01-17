@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Flight extends Model
+class Student extends Model
 {
     use HasFactory;
     // // Specify the table name for this model (defaults to "flights" based on convention)
