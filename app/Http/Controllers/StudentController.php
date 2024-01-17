@@ -112,4 +112,12 @@ class StudentController extends Controller
 
        dd($results);
     }
+
+    public function getfnf($id){
+
+        //$students = Student::findOrFail($id);  //if founded id then return the data else it will throw an exception it is working like find()
+        //Student::where('id',$id)->firstOrFail(); //if founded id then return the data else it will throw an exception it is working like first()
+
+
+    }
 }
