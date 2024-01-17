@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Result;
+use App\Models\Mechanic;
+use App\Models\Car;
+use App\Models\Owner;
+
 
 
 
@@ -136,8 +140,11 @@ class StudentController extends Controller
 
      //one to many relationship
 
-     $student = Student::find(3);
-     dd($student->results);
+   //  $student = Student::find(3);
+   //  dd($student->results);
+
+    $mesc = Mechanic::with('carOwner')->get();
+    dd($mesc);
 
     }
 }
