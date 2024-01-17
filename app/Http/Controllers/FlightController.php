@@ -41,4 +41,16 @@ class FlightController extends Controller
         // Student::create($data);
 
     }
+
+    public function delete($id){
+       // $student = Student::find($id);
+        //$student->delete();
+
+       // $student = Student::find(1)->delete(); to delete perticular data
+
+       $student = Student::destroy($id,$id2); //to delete multiple data or single data
+
+
+
+    }
 }
